@@ -1,0 +1,219 @@
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460); /* fondo de la PÁGINA */
+  color: #222;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+  width: 100%;
+  max-width: 640px;          /* se adapta a pantallas pequeñas */
+  background: #ffffff;       /* fondo del FORMULARIO (distinto al de la página) */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  margin: 0 0 5px;
+  text-align: center;
+  color: #0f3460;
+}
+
+.subtitulo {
+  text-align: center;
+  margin: 0 0 25px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ===== FIELDSET Y LEGEND ===== */
+fieldset {
+  border: 2px solid #e0e6f0;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 0 0 20px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #e94560;
+}
+
+/* ===== CAMPOS ===== */
+.campo {
+  margin-bottom: 18px;       /* espacio entre campos */
+}
+
+.campo:last-child {
+  margin-bottom: 0;
+}
+
+label,
+.titulo-grupo {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 2px solid #d5dbe8;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fafbff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* ===== EFECTO AL SELECCIONAR UN CAMPO ===== */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #e94560;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(233, 69, 96, 0.2);
+}
+
+/* ===== RADIOS Y CHECKBOXES ===== */
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 14px;
+  border: 2px solid #d5dbe8;
+  border-radius: 8px;
+  font-weight: normal;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.opcion:hover {
+  border-color: #0f3460;
+  background: #f0f4ff;
+}
+
+.opcion input {
+  accent-color: #e94560;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+a {
+  color: #e94560;
+  font-weight: bold;
+}
+
+/* ===== BOTONES ===== */
+.botones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.btn-inscribir {
+  background: #e94560;
+  color: #fff;
+}
+
+.btn-limpiar {
+  background: #e0e6f0;
+  color: #0f3460;
+}
+
+/* ===== EFECTO AL PASAR POR ENCIMA DE UN BOTÓN ===== */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btn-inscribir:hover {
+  background: #c9304a;
+}
+
+.btn-limpiar:hover {
+  background: #cdd5e6;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* ===== PÁGINA DE NORMAS ===== */
+.pagina-normas {
+  width: 100%;
+  max-width: 700px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  line-height: 1.6;
+}
+
+.pagina-normas h1 {
+  text-align: left;
+}
+
+.pagina-normas h2 {
+  color: #e94560;
+  font-size: 1.15rem;
+  margin-top: 22px;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* ===== PANTALLAS PEQUEÑAS ===== */
+@media (max-width: 480px) {
+  form,
+  .pagina-normas {
+    padding: 20px 15px;
+  }
+}
